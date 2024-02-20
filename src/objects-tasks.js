@@ -35,7 +35,8 @@ function shallowCopy(obj) {
  */
 function mergeObjects(/* objects */) {
   // const result = {};
-  // objects.map((item) => {
+  // const newArr = [...objects];
+  // newArr.map((item) => {
   //   for (const [key, value] of Object.entries(item)) {
   //     if (result[key]) {
   //       result[key] += value;
@@ -43,8 +44,10 @@ function mergeObjects(/* objects */) {
   //       result[key] = value;
   //     }
   //   }
+  //   return result;
   // });
   // return result;
+  throw new Error('Not implemented');
 }
 
 /**
@@ -101,8 +104,8 @@ function compareObjects(obj1, obj2) {
  *    isEmptyObject({}) => true
  *    isEmptyObject({a: 1}) => false
  */
-function isEmptyObject(/* obj */) {
-  throw new Error('Not implemented');
+function isEmptyObject(obj) {
+  return Object.keys(obj).length === 0;
 }
 
 /**
